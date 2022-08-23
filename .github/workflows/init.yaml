@@ -2,7 +2,7 @@
 
 name: Placeholder
 
-#on: push
+on: push
 #on:
   #push: 
     #branches: [main]
@@ -10,9 +10,9 @@ name: Placeholder
 #on:
   #workflow_call:
 
-on:
-    issue_comment:
-      types: [created]
+#on:
+    #issue_comment:
+      #types: [created]
       
       
     
