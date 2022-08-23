@@ -3,19 +3,20 @@
 name: Placeholder
 
 #on: push
-#on:
-  #push: 
-    #branches: [main]
-
 on:
-  workflow_call:
+  push: 
+    branches: [main]
+
+#on:
+  #workflow_call:
   
 
 #on:
     #issue_comment:
       #types: [created]
       
-      
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref }}
     
 jobs:
   init:
@@ -36,4 +37,4 @@ jobs:
         run: |
           echo ${{ steps.ns.outputs.capitalized }}
           echo ${{ github.sha }}     
-          echo sec ${{ secrets.AWS_KEY_ID }}
+          echo sec ${{ env.BRANCH_NAME }}
