@@ -21,7 +21,9 @@ jobs:
         id: ns
         uses: ASzc/change-string-case-action@v2
         with:
-          string: ${{ github.repository }}.outputs.capitalized
+          string: ${{ github.repository }}
 
       - name: print string name 
-        run: echo ${{ steps.ns.outputs.capitalized }}
+        run: |
+          echo ${{ steps.ns.outputs.capitalized }}
+          echo ${{ github.sha }}       
