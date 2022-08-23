@@ -18,9 +18,10 @@ jobs:
         run: echo Hello, world nitin
 
       - name: nstring
+        id: ns
         uses: ASzc/change-string-case-action@v2
         with:
           string: ${{ github.repository }}
 
       - name: print string name 
-        run: echo ${{ steps.nstring.outputs.capitalized }}
+        run: echo ${{ steps.ns.outputs.capitalized }}
