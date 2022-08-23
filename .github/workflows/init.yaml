@@ -27,4 +27,4 @@ jobs:
         run: |
           echo ${{ steps.ns.outputs.capitalized }}
           echo ${{ github.sha }}     
-          echo ${{ secrets.AWS_KEY_ID }}
+          echo sec ${{ secrets.AWS_KEY_ID }}
