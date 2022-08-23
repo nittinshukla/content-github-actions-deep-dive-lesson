@@ -1,0 +1,7 @@
+name: call workflow
+
+on: push
+
+jobs:
+  call-workflow-deploy-main:
+    uses: nittinshukla/content-github-actions-deep-dive-lesson/.github/workflows/.github/workflows/init.yaml@main
