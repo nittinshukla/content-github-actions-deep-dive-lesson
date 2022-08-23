@@ -7,9 +7,13 @@ name: Placeholder
   #push: 
     #branches: [main]
 
-on:
-  workflow_call:
+#on:
+  #workflow_call:
 
+on:
+    issue_comment:
+      types: [created]
+    
 jobs:
   init:
     runs-on: ubuntu-latest
