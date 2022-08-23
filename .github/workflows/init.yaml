@@ -2,14 +2,14 @@
 
 name: Placeholder
 
-on: push
+#on: push
 #on:
   #push: 
     #branches: [main]
     
 
-#on:
-  #workflow_call:
+on:
+  workflow_call:
   
 
 #on:
