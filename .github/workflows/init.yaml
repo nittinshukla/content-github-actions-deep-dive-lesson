@@ -17,10 +17,10 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world nitin
 
-      - id: string
+      - id: nstring
         uses: ASzc/change-string-case-action@v2
         with:
           string: ${{ github.repository }}
 
       - name: print string name 
-        run: echo ${{ steps.string.outputs.lowercase }}
+        run: echo ${{ steps.nstring.outputs.lowercase }}
