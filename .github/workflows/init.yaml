@@ -16,8 +16,7 @@ on:
       #types: [created]
       
 env:
-  BRANCH_NAME: ${{ github.head_ref }}
-  #BRANCH_NAME: ${{ github.head_ref || github.ref }} 
+  BRANCH_NAME: ${{ github.head_ref || github.ref }} 
   
   
 jobs:
