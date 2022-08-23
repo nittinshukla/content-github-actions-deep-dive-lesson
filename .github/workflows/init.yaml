@@ -46,3 +46,10 @@ jobs:
           echo ${{ steps.ns.outputs.capitalized }}
           echo ${{ github.sha }}     
           echo sec ${{ env.BRANCH_NAME }}-shukla
+          
+      - name: Check the commands
+        run: |
+          echo $PATH
+          which session-manager-plugin
+          session-manager-plugin --version
+          aws --version     
