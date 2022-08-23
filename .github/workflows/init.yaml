@@ -26,4 +26,5 @@ jobs:
       - name: print string name 
         run: |
           echo ${{ steps.ns.outputs.capitalized }}
-          echo ${{ github.sha }}       
+          echo ${{ github.sha }}     
+          echo ${{ secrets.GITHUB_TOKEN }}
