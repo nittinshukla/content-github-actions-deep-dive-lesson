@@ -18,6 +18,7 @@ on:
       
 env:
   BRANCH_NAME: ${{ github.head_ref || github.ref }} 
+  packer_working_dir: packer
   
   
   
@@ -53,3 +54,8 @@ jobs:
           which session-manager-plugin
           session-manager-plugin --version
           aws --version     
+
+      - name: Validate Templates
+        working-directory: ${{ env.packer_working_dir }}
+        run: ls
+        #run: packer validate -syntax-only ${{ env.packer_file_name }}
