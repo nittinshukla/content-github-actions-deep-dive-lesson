@@ -53,7 +53,9 @@ jobs:
       - name: Run a one-line script
         run: |
           echo Hello, world nitin
-          echo ${{steps.checkrepo.outputs.outvalue}} | awk '{print toupper($0)}'
+          value=$(echo ${{steps.checkrepo.outputs.outvalue}} | awk '{print toupper($0)}')
+          echo $value
+          
 
       - name: nstring
         id: ns
