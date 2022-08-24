@@ -32,9 +32,10 @@ jobs:
         env:
             repo: ${{github.repository}}
             repo_owner: ${{github.repository_owner}}
+        run: |
+          echo ${{steps.checkrepo.outputs}}
+           
             
-      - name: print repo
-        run: echo ${{steps.checkrepo.outputs}}
 
       - name: Checkout repository
         uses: actions/checkout@v3
