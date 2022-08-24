@@ -42,7 +42,7 @@ jobs:
           
            
       - name: print checkrepo value     
-        run: ${{steps.checkrepo.outputs.outvalue}}      
+        run: echo ${{steps.checkrepo.outputs.outvalue}}      
 
       - name: Checkout repository
         uses: actions/checkout@v3
