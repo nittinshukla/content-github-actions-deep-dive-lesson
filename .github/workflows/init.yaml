@@ -34,7 +34,7 @@ jobs:
             repo_owner: ${{github.repository_owner}}
             
       - name: print repo
-        run: ${{steps.checkrepo.outputs}}
+        run: echo ${{steps.checkrepo.outputs}}
 
       - name: Checkout repository
         uses: actions/checkout@v3
