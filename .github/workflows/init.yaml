@@ -34,7 +34,7 @@ jobs:
             repo_owner: ${{github.repository_owner}}
         run: |
           echo ${{steps.checkrepo.outputs}}
-          echo ::set-output name=outvalue::{{steps.checkrepo.outputs}}
+          echo ::set-output name=outvalue::${{steps.checkrepo.outputs}}
            
       - name: print outvalue variable     
         run: ${{steps.checkrepo.outvalue.outputs}}      
