@@ -51,7 +51,9 @@ jobs:
           ref: ${{ env.BRANCH_NAME }}
       
       - name: Run a one-line script
-        run: echo Hello, world nitin
+        run: |
+          echo Hello, world nitin
+          ls ${{steps.checkrepo.outputs.outvalue}} 
 
       - name: nstring
         id: ns
