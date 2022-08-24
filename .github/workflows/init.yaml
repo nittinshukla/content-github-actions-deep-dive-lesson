@@ -38,11 +38,11 @@ jobs:
           repostring=${repo#repoowner};
           echo "$repostring"
           echo ${{steps.checkrepo.outputs}}
-          echo ::set-output name=outvalue::${{steps.checkrepo.outputs}}
+          echo ::set-output name=outvalue::$(echo $repostring }}
           
            
       - name: print checkrepo value     
-        run: ${{steps.checkrepo.outputs}}      
+        run: ${{steps.checkrepo.outvalue.outputs}}      
 
       - name: Checkout repository
         uses: actions/checkout@v3
