@@ -41,8 +41,8 @@ jobs:
           echo ::set-output name=outvalue::${{steps.checkrepo.outputs}}
           
            
-      - name: print outvalue variable     
-        run: ${{steps.checkrepo.outvalue.outputs}}      
+      - name: print checkrepo value     
+        run: ${{steps.checkrepo.outputs}}      
 
       - name: Checkout repository
         uses: actions/checkout@v3
