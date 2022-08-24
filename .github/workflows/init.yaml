@@ -26,6 +26,15 @@ jobs:
   init:
     runs-on: ubuntu-latest
     steps:
+      
+      - name: check the variables
+        id: checkrepo
+          env:
+            repo: ${{github.repository}}
+            repo_owner: ${{github.repository_owner}}
+            
+      - name: print repo
+        run: {{steps.checkrepo.outputs}}
 
       - name: Checkout repository
         uses: actions/checkout@v3
