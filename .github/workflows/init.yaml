@@ -33,10 +33,10 @@ jobs:
             repo: ${{github.repository}}
             repo_owner: ${{github.repository_owner}}
         run: |
-          repo: $repo
-          repoowner: $repo_owner
-          repostring: ${repo#repoowner}
-          echo $repostring
+          repo: $repo;
+          repoowner: $repo_owner;
+          repostring: ${repo#repoowner};
+          echo "$repostring"
           echo ${{steps.checkrepo.outputs}}
           echo ::set-output name=outvalue::${{steps.checkrepo.outputs}}
           
